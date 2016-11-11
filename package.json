@@ -1,0 +1,17 @@
+{
+  "name": "express_weekend_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test" : "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phil",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1"
+  }
+}
