@@ -9,17 +9,31 @@
   </head>
   <body>
 
-    <h1>Express Cats!</h1>
+    <h1>Calculator!!</h1>
+
+
+
+
   <form id="inputData">
-    <label for="numberOne">Number 1:</label>
-    <input type="text" id="numberOne" name="numberOne" />
+    <label for="x">Number 1:</label>
+    <input type="text" id="x" name="x" />
 
-    <label for="numberTwo">Number 2:</label>
-    <input type="text" id="numberTwo" name="numberTwo" />
+    <label for="y">Number 2:</label>
+    <input type="text" id="y" name="y" />
 
-    <input type="submit" value="combineNumbers" />
+    <br />
+
+<div class= "buttonsGroup">
+
+    <button value="add" data-type ="add"> Add </button>
+    <button value="sub" data-type ="subtract" > Subtract </button>
+    <button value="multiply" data-type ="multiply" > Multiply </button>
+    <button value="divide" data-type ="divide" > Division </button>
+</div>
+
   </form>
-  <section id="catBox"></section>
+  <div id="numbersBox">
+  </div>
 
 
   </body>
