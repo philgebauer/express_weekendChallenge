@@ -34,7 +34,7 @@ $(document).ready(function() {
     function clearAll () {
       number.x = '',
       number.y = '',
-      buttonType = null,
+      number.buttonType = null,
       appendNumbers(number),
       $('#numbersBox').html('');
 

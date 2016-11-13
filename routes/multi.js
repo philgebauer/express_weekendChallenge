@@ -6,14 +6,14 @@ var number = {
   result : 0
 }
 
-function multiply (x , y) {
-  result = x * y;
+function multi(x , y) {
+  return x * y;
 }
 
 router.post('/', function (req, res) {
   var x = parseFloat(req.body.x);
   var y = parseFloat(req.body.y);
-  number.result = multiply(x, y);
+  number.result = multi(x, y);
   res.sendStatus(201);
 });
 
