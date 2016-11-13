@@ -22,16 +22,24 @@ $(document).ready(function() {
 
 
     function appendNumbers(num) {
-        $('#numbersBox').append('<h2>' + num.result + '</h2>')
+        $('#numbersBox').text(num.result);
     }
 
 
-    $('.buttonsGroup').on('click', '#clear', function() {
-      $('#numbersBox').remove();
-    });
+    $('.buttonsGroup').on('click', '#clear', clearAll);
 
     $('button').on('click', postNumbers);
 
+
+    function clearAll () {
+      number.x = '',
+      number.y = '',
+      buttonType = null,
+      appendNumbers(number),
+      $('#numbersBox').html('');
+
+    }
+    
 
     function postNumbers(numbers) {
         event.preventDefault();
