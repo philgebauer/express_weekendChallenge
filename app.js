@@ -7,16 +7,16 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var add = require('./routes/add.js');
-// var add = require('./routes/sub.js');
-// var add = require('./routes/multi.js');
-// var add = require('./routes/div.js');
+var sub = require('./routes/sub.js');
+var multi = require('./routes/multi.js');
+var div = require('./routes/div.js');
 //
 //
 // //routes
 app.use('/add', add);
-// app.use('/sub', sub);
-// app.use('/multiply', multi);
-// app.use('/division', div);
+app.use('/sub', sub);
+app.use('/multi', multi);
+app.use('/div', div);
 
 
 app.set('port', process.env.PORT || 3000);
@@ -29,6 +29,11 @@ app.get('/*', function (req, res) {
   var file = req.params[0] || 'index.html';
   // console.log("file " + file);
 
-  res.sendFile(path.join(__dirname, '/', file));
+  res.sendFile(path.join(__dirname, file));
   // console.log("dirname" + __dirname);
 });
+
+
+
+// res.sendFile(path.join(__dirname, '/', file));
+// console.log("dirname" + __dirname);

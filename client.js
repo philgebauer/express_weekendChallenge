@@ -1,8 +1,9 @@
 var number = {
     x: '',
     y: '',
-    buttonType: ''
+    buttonType: null
 }
+
 
 
 $(document).ready(function() {
@@ -11,7 +12,7 @@ $(document).ready(function() {
     function getNumber() {
         $.ajax({
             type: 'GET',
-            url: '/add',
+            url: number.buttonType,
             success: function(data) {
                 console.log("got data!");
                 appendNumbers(data);
@@ -46,10 +47,9 @@ $(document).ready(function() {
 
         console.log("2:", number);
 
-
         $.ajax({
             type: 'POST',
-            url: '/add',
+            url: number.buttonType,
             data: number,
             success: function(data) {
                 getNumber(data);
