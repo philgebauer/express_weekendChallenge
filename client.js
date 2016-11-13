@@ -37,13 +37,12 @@ $(document).ready(function() {
       number.buttonType = null,
       appendNumbers(number),
       $('#numbersBox').html('');
-
+      $('#inputData').find('input[type=text]').val('');
     }
 
 
     function postNumbers(numbers) {
         event.preventDefault();
-        // var number = {};
         console.log("1:", number);
         // $('#inputData').empty();
 
