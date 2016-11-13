@@ -39,12 +39,13 @@ $(document).ready(function() {
       $('#numbersBox').html('');
 
     }
-    
+
 
     function postNumbers(numbers) {
         event.preventDefault();
         // var number = {};
         console.log("1:", number);
+        // $('#inputData').empty();
 
         number.buttonType = $(this).data('type');
 
